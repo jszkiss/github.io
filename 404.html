@@ -1,15 +1,15 @@
 <script type="text/javascript">  
-
 var url = window.location.pathname;
-var pcurl="http://www.tv-123.cn"+url
+var wapurl="http://www.tv-123.cn"+url
 
-if(/AppleWebKit.*Mobile/i.test(navigator.userAgent)==false || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))==false){
+if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
 	if(window.location.href.indexOf("?mobile")<0){
 		try{
-			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
-				 window.location.href=pcurl; 
+			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){
+				 window.location.href=wapurl; 
+			}else{ 
+			   	window.location.href=wapurl;
 			}
-
 		}catch(e){}
 	}
 }
